@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool canMakeSubsequence(string s1, string s2) {
+        int i=0,j=0;
+        int n=s2.size(),m=s1.size();
+        
+        while(j<n && i<m){
+             
+            if(s1[i]==s2[j] || s1[i]+1==s2[j] || s1[i]-25==s2[j] ){
+               // i++;
+                j++;
+            }
+           i++;
+            
+        }  
+        return j==n;      
+    }
+};
