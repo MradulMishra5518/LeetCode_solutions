@@ -1,0 +1,19 @@
+class Solution {
+public:
+    long long pickGifts(vector<int>& g, int k) {
+        priority_queue<int> pq;
+        long long sum=0;
+        for(auto it:g){
+            pq.push(it);
+            sum+=it;
+        }
+        while(k--){
+            int temp= sqrt(pq.top());
+            sum-=pq.top();
+            sum+=temp;
+            pq.pop();
+            pq.push(temp);
+        }
+        return sum;
+    }
+};
