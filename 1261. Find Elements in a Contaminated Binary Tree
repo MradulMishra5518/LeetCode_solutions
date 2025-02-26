@@ -1,4 +1,3 @@
-
 class FindElements {
     unordered_set<int> recoveredValues;
 
